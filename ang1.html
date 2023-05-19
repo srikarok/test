@@ -1,0 +1,112 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="ang2.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<header>
+    <button class="btnloginpopup">login</button>
+</header>
+
+<div class="wrapper">
+    <span class="iconclose">
+    <ion-icon name="close-outline"></ion-icon>
+    </span>
+    <div class="formbox login">
+        <h2>Login</h2>
+        <form action="#">
+        <div class="inputbox">
+            <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Email</label>
+        </div>
+        <div class="inputbox">
+            <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required>
+            <label>password</label>
+        </div>
+        <div class="remfor">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="logreg">
+            <p>Dont have account?
+            <a href="#" class="registerlink">Register</a></p>
+        </div>
+    </form>
+</div>
+
+
+
+
+    <div class="formbox register">
+        <h2>Registration</h2>
+        <form action="#">
+        <div class="inputbox">
+            <span class="icon">
+                <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Username</label>
+        </div>
+        <div class="inputbox">
+            <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Email</label>
+        </div>
+        <div class="inputbox">
+            <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required>
+            <label>password</label>
+        </div>
+        <div class="remfor">
+            <label><input type="checkbox">I agree to the terms & conditions</label>
+           
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="logreg">
+            <p>Already have an account?
+            <a href="#" class="loginlink">Login</a></p>
+        </div>
+    </form>
+
+
+
+
+    </div>
+</div>
+</body>
+<script>
+    const wrapper=document.querySelector('.wrapper');
+    const Loginlink1=document.querySelector('.loginlink');
+    const registerLink=document.querySelector('.registerlink');
+    const btnpopup=document.querySelector('.btnloginpopup');
+    const Iconclose=document.querySelector('.iconclose');
+
+    registerLink.addEventListener('click',()=>{
+        wrapper.classList.add('active');});
+
+    Loginlink1.addEventListener('click',()=>{
+    wrapper.classList.remove('active');});
+
+    btnpopup.addEventListener('click',()=>{
+    wrapper.classList.add('active-popup');});
+    
+    Iconclose.addEventListener('click',()=>{
+    wrapper.classList.remove('active-popup');});
+
+</script>
+</html>
